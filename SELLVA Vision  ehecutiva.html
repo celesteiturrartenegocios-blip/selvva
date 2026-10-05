@@ -1,0 +1,427 @@
+<!DOCTYPE html><html class="light" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Panel de Control • SELVVA Social &amp; Lifestyle Club</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed-dim": "#ffb4a1",
+            "inverse-primary": "#ffb4a1",
+            "inverse-surface": "#33302d",
+            "on-error-container": "#93000a",
+            "on-primary-fixed-variant": "#881f00",
+            "primary": "#a83211",
+            "surface-container-highest": "#e9e1dd",
+            "on-tertiary-fixed-variant": "#005236",
+            "secondary-fixed-dim": "#ffb4a5",
+            "tertiary": "#006947",
+            "tertiary-fixed": "#86f8c2",
+            "surface-tint": "#ab3513",
+            "on-secondary-container": "#772a1c",
+            "on-primary-fixed": "#3c0800",
+            "surface-container": "#f4ece8",
+            "background": "#fff8f5",
+            "secondary-container": "#fe937e",
+            "on-secondary-fixed-variant": "#7b2e1f",
+            "on-surface-variant": "#59413b",
+            "surface-container-lowest": "#ffffff",
+            "surface-dim": "#e0d8d5",
+            "primary-container": "#ca4a28",
+            "on-secondary-fixed": "#3e0400",
+            "on-primary-container": "#fffbff",
+            "tertiary-fixed-dim": "#69dba8",
+            "on-surface": "#1e1b19",
+            "secondary-fixed": "#ffdad3",
+            "outline-variant": "#e0bfb7",
+            "inverse-on-surface": "#f7efeb",
+            "error-container": "#ffdad6",
+            "surface-container-low": "#faf2ee",
+            "outline": "#8c716a",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed": "#002113",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "on-background": "#1e1b19",
+            "surface": "#fff8f5",
+            "surface-container-high": "#eee7e3",
+            "tertiary-container": "#00855b",
+            "surface-variant": "#e9e1dd",
+            "secondary": "#9a4434",
+            "primary-fixed": "#ffdbd1",
+            "on-error": "#ffffff",
+            "on-tertiary-container": "#f5fff6",
+            "surface-bright": "#fff8f5",
+            "on-secondary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "2rem",
+            "gutter-mobile": "0.75rem",
+            "space-sm": "0.5rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "margin-tablet": "1.5rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "display-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.025em", "fontWeight": "800" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+    /* Hide scrollbars smoothly for horizontal snap strips */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex justify-center selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Mobile Viewport Shell (390px default container) -->
+<div class="w-full max-w-[390px] min-h-screen bg-background relative flex flex-col pb-24 shadow-2xl">
+<!-- TopAppBar Component (from Shared Components Specification) -->
+<header class="sticky top-0 z-40 flex justify-between items-center w-full px-4 h-16 max-w-lg mx-auto bg-surface/90 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-2.5"><div class="relative w-9 h-9 rounded-xl overflow-hidden flex-shrink-0 shadow-sm ring-1 ring-outline-variant/30"><img class="w-full h-full object-cover" alt="SELVVA Logo" src="https://lh3.googleusercontent.com/aida/AEtjO1UpPtCi4h0f9_2YlWce5Gn5Gh1pcWg4duEZ7e7YRzaMJJ7lBEtBIXRMIMnjGVN3990T0nKTlApFX2bQYymWjqPBvZtl71NzRBJBSdklREY0YDsKTeC8qyEPts6eWu46CS64qoa7MkRFAwBjH0cQYIJ8uP_oS_Re8osTFnENiSvPa-Sy9-f_OteDE71pgcrz25WLYAzffvRulX5cIQM-jbPpdRwOeuekGPof9HrvSGHtv4LQrPtq_1SyLO94"></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="text-headline-sm font-headline-sm font-bold text-on-surface leading-tight tracking-tight">SELVVA</span><span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span><span class="text-label-sm font-label-sm font-semibold text-outline">Panel</span></div><span class="text-label-sm font-label-sm text-on-surface-variant font-medium tracking-normal">Social &amp; Lifestyle Club</span></div></div>
+<div class="flex items-center gap-1">
+<button aria-label="Notificaciones" class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container transition-colors duration-150 active:scale-95">
+<span class="material-symbols-outlined text-primary text-[22px]">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span>
+</button>
+</div>
+</header>
+<!-- Main Scrollable Canvas -->
+<main class="flex-1 px-4 pt-3 space-y-5">
+<!-- Subheader: Context & Period Selector Filter Pills -->
+<section class="flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-outline">SELVVA • Visión Ejecutiva</span>
+<h1 class="text-title-md font-title-md font-bold text-on-surface">Métricas de Impacto</h1>
+</div>
+<!-- Period Filter Selector -->
+<div class="flex items-center bg-surface-container p-1 rounded-full border border-outline-variant/30">
+<button class="px-3 py-1 rounded-full text-label-sm font-label-sm bg-surface-container-lowest text-on-surface font-bold shadow-sm transition-all">
+            Este Mes
+          </button>
+<button class="px-3 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant hover:text-on-surface transition-colors">
+            7 Días
+          </button>
+</div>
+</section>
+<!-- KPI Hero Bento: Platform Revenue Card (Level 1 Elevation) -->
+<section class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/40 shadow-[0px_4px_16px_-2px_rgba(28,25,23,0.05)] relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-primary-fixed/30 blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<div class="flex items-center gap-1.5">
+<span class="text-label-sm font-label-sm font-semibold text-on-surface-variant uppercase tracking-wider">Ingresos Plataforma</span>
+<span class="material-symbols-outlined text-outline text-[16px]">account_balance_wallet</span>
+</div>
+<div class="text-display-lg-mobile font-display-lg-mobile text-on-surface font-extrabold tracking-tight">
+              $485.200 <span class="text-title-md font-title-md text-on-surface-variant font-bold">ARS</span>
+</div>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary/10 border border-tertiary/20 text-tertiary">
+<span class="material-symbols-outlined text-[15px]">trending_up</span>
+<span class="text-label-sm font-label-sm font-bold">+24%</span>
+</div>
+</div>
+<div class="mt-3 pt-3 border-t border-surface-container flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<p class="leading-snug pr-2 text-label-sm font-label-sm text-outline">
+            Comisiones por canjes premium y membresías de comunidades.
+          </p>
+<span class="text-label-sm font-label-sm font-bold text-primary flex items-center gap-0.5 shrink-0 cursor-pointer active:scale-95">
+            Detalle <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</span>
+</div>
+</section>
+<!-- Active Exchanges & Community Stats Bento Grid (2 Columns) -->
+<section class="grid grid-cols-2 gap-3">
+<!-- Canjes Activos Box -->
+<div class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/40 shadow-[0px_4px_16px_-2px_rgba(28,25,23,0.05)] flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded-xl bg-secondary-fixed/40 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]">local_activity</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-medium">Canjes Activos</span>
+<div class="text-headline-md font-headline-md font-bold text-on-surface mt-0.5">
+              42 <span class="text-label-md font-label-md font-normal text-on-surface-variant">en curso</span>
+</div>
+</div>
+<div class="mt-2.5 pt-2 border-t border-surface-container">
+<span class="text-label-sm font-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary inline-block"></span>
+              18 esta semana
+            </span>
+</div>
+</div>
+<!-- Ecosystem Summary Box -->
+<div class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/40 shadow-[0px_4px_16px_-2px_rgba(28,25,23,0.05)] flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded-xl bg-tertiary-fixed/30 flex items-center justify-center text-tertiary mb-2">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-medium">Red Mar del Plata</span>
+<div class="text-headline-md font-headline-md font-bold text-on-surface mt-0.5">
+              124 <span class="text-label-md font-label-md font-normal text-on-surface-variant">nodos</span>
+</div>
+</div>
+<div class="mt-2.5 pt-2 border-t border-surface-container text-label-sm font-label-sm text-outline space-y-0.5">
+<div class="truncate font-medium text-on-surface">18 Bares y Cafés</div>
+<div class="truncate text-on-surface-variant">94 Creadores • 12 Grupos</div>
+</div>
+</div>
+</section>
+<!-- Urban Rhythm / Peak Traffic Section (Horarios Valle) -->
+<section class="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/40 shadow-[0px_4px_16px_-2px_rgba(28,25,23,0.05)]">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<div class="p-1.5 rounded-lg bg-primary-fixed/40 text-primary">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<h2 class="text-title-md font-title-md font-bold text-on-surface">Impacto en Horarios Valle</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-primary/10 text-primary font-bold">70% de canjes</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-3.5">
+          Picos de reactivación urbana concentrados en tardes de baja concurrencia habitual.
+        </p>
+<!-- Visual Bar Chart Representation -->
+<div class="space-y-2 bg-surface-container-low p-3 rounded-xl border border-outline-variant/20">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">wb_twilight</span>
+              Martes &amp; Miércoles
+            </span>
+<span class="text-primary font-bold">16:00 a 19:00 hs</span>
+</div>
+<!-- Activity Distribution Bar -->
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-primary-container rounded-full" style="width: 72%;"></div>
+<div class="h-full bg-secondary-fixed-dim opacity-70" style="width: 18%;"></div>
+<div class="h-full bg-outline-variant/50" style="width: 10%;"></div>
+</div>
+<div class="flex justify-between text-label-sm font-label-sm text-outline pt-1">
+<span class="">Canjes café + merienda</span>
+<span class="font-semibold text-on-surface">+3.2x vs fin de semana</span>
+</div>
+</div>
+</section>
+<!-- Action Required / Pending Review Feed -->
+<section class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h2 class="text-title-md font-title-md font-bold text-on-surface">Acciones Pendientes</h2>
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary text-label-sm font-label-sm flex items-center justify-center font-bold">3</span>
+</div>
+<span class="text-label-sm font-label-sm font-semibold text-primary cursor-pointer">Ver historial</span>
+</div>
+<!-- Alert Card 1: Commerce Onboarding with CUIT -->
+<article class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/50 shadow-sm relative">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/30 text-on-surface">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm font-bold text-secondary uppercase">Comercio Nuevo</span>
+<span class="text-label-sm font-label-sm text-outline">Hace 22m</span>
+</div>
+<h3 class="text-title-md font-title-md font-bold text-on-surface truncate">Café París MdP</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-snug mt-0.5">
+                Solicita alta de local con CUIT verificado y menú degustación para creadores.
+              </p>
+<!-- Quick CTAs -->
+<div class="flex items-center gap-2 mt-3">
+<button class="flex-1 h-9 px-3 rounded-xl bg-tertiary text-on-tertiary text-label-sm font-label-sm font-bold flex items-center justify-center gap-1 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                  Aprobar
+                </button>
+<button class="h-9 px-3 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm font-bold flex items-center justify-center gap-1 border border-outline-variant/30 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+                  Revisar
+                </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Alert Card 2: Creator Verification -->
+<article class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/50 shadow-sm">
+<div class="flex items-start gap-3">
+<div class="relative w-10 h-10 rounded-xl overflow-hidden shrink-0 border border-tertiary/40">
+<img class="w-full h-full object-cover" data-alt="Modern close up avatar of a trendy male food creator holding a cup of espresso in an artisan coffee shop, vibrant warm natural lighting with Mar del Plata coast vibes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj5sDPWrRN1aSb__g3e32uHWzfaDypjSdpnHbwMpgJZ4iYSMGN1BXrtuBpDd7P9GReSd_GR1KXaIZ_oy7_qUkxg8RwI-JZCsD_Po8RxDVLMwyYSb86G71UmYiVfNXOPtJZS49BHEU-5_BUYS_ASceDCYFXiYtByIFbMq_oz8dh7spefbP25i23uzmsQfsOwt_RZL8-DFzZWtj2oAfzZ11Zs1iZPhT7uztGaoQg5HSSIugi0BzxawHudQ">
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm font-bold text-primary uppercase">Validación UGC</span>
+<span class="text-label-sm font-label-sm text-outline">Hace 1h</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<h3 class="text-title-md font-title-md font-bold text-on-surface truncate">Lucas Gastronomía</h3>
+<span class="text-label-sm font-label-sm text-tertiary font-bold bg-tertiary/10 px-1.5 py-0.2 rounded">12k ig</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-snug mt-0.5">
+                Métricas de engagement auditadas: 6.4% promedio en reels locales.
+              </p>
+<div class="flex items-center gap-2 mt-3">
+<button class="flex-1 h-9 px-3 rounded-xl bg-primary text-on-primary text-label-sm font-label-sm font-bold flex items-center justify-center gap-1 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                  Verificar Creador
+                </button>
+<button class="h-9 px-3 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm font-bold flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Alert Card 3: Fee Settlement Report -->
+<article class="bg-surface-container-lowest rounded-2xl p-3.5 border border-outline-variant/50 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</div>
+<div>
+<h3 class="text-label-lg font-label-lg font-bold text-on-surface">Cobro de Fee de Servicio</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">6 canjes cerrados con éxito listos para liquidación</p>
+</div>
+</div>
+<button class="p-2 rounded-xl bg-surface-container text-primary hover:bg-primary-fixed transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</article>
+</section>
+<!-- Quick Platform Management Shortcuts (Grid) -->
+<section class="space-y-2.5 pt-1">
+<h2 class="text-title-md font-title-md font-bold text-on-surface">Gestión Rápida del Sistema</h2>
+<div class="grid grid-cols-3 gap-2">
+<!-- Shortcut 1: Comisiones -->
+<button class="bg-surface-container-lowest p-3 rounded-2xl border border-outline-variant/40 shadow-sm flex flex-col items-center text-center group active:scale-95 transition-all">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed/40 text-primary flex items-center justify-center mb-2 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">percent</span>
+</div>
+<span class="text-label-sm font-label-sm font-bold text-on-surface leading-tight">Configurar Comisiones</span>
+</button>
+<!-- Shortcut 2: Categorías -->
+<button class="bg-surface-container-lowest p-3 rounded-2xl border border-outline-variant/40 shadow-sm flex flex-col items-center text-center group active:scale-95 transition-all">
+<div class="w-10 h-10 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center mb-2 group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]">category</span>
+</div>
+<span class="text-label-sm font-label-sm font-bold text-on-surface leading-tight">Gestionar Categorías</span>
+</button>
+<!-- Shortcut 3: Push Masivo -->
+<button class="bg-surface-container-lowest p-3 rounded-2xl border border-outline-variant/40 shadow-sm flex flex-col items-center text-center group active:scale-95 transition-all">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed/50 text-secondary flex items-center justify-center mb-2 group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+</div>
+<span class="text-label-sm font-label-sm font-bold text-on-surface leading-tight">Push Masivo Comercios</span>
+</button>
+</div>
+</section>
+<!-- Active Micro-Influencer Spotlight Mini-Bar -->
+<section class="bg-gradient-to-r from-surface-container to-surface-container-low p-3.5 rounded-2xl border border-outline-variant/30 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[22px]">auto_graph</span>
+<div>
+<span class="text-label-sm font-label-sm font-bold text-on-surface block">Membresías Club Creadores</span>
+<span class="text-body-sm font-body-sm text-outline">98.4% retención de comercios este mes</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">insights</span>
+</section>
+</main>
+<!-- BottomNavBar Component (Executed strictly from Shared Components Specification) -->
+<!-- Screen intent is platform governance/admin hub: maps directly to destination set -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 flex justify-around items-center h-16 px-2 max-w-lg mx-auto pb-safe bg-surface/95 backdrop-blur-lg shadow-[0_-4px_20px_rgba(28,25,23,0.06)]">
+<!-- Inicio (Active State applied autonomously for Control Panel / Dashboard intent) -->
+<button class="flex flex-col items-center justify-center text-primary font-bold active:scale-95 transition-transform duration-150 py-1 px-2">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-sm font-label-sm mt-0.5">Inicio</span>
+</button>
+<!-- Explorar (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors duration-150 active:scale-95 py-1 px-2">
+<span class="material-symbols-outlined text-[22px]">explore</span>
+<span class="text-label-sm font-label-sm mt-0.5">Explorar</span>
+</button>
+<!-- Postulaciones (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors duration-150 active:scale-95 py-1 px-2 relative">
+<span class="material-symbols-outlined text-[22px]">assignment</span>
+<span class="text-label-sm font-label-sm mt-0.5">Postulaciones</span>
+<span class="absolute top-1 right-3 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<!-- Mensajes (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors duration-150 active:scale-95 py-1 px-2">
+<span class="material-symbols-outlined text-[22px]">chat_bubble</span>
+<span class="text-label-sm font-label-sm mt-0.5">Mensajes</span>
+</button>
+<!-- Perfil (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors duration-150 active:scale-95 py-1 px-2">
+<span class="material-symbols-outlined text-[22px]">person</span>
+<span class="text-label-sm font-label-sm mt-0.5">Perfil</span>
+</button>
+</nav>
+</div>
+
+
+</body></html>
